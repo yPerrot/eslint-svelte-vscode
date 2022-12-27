@@ -1,48 +1,49 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-    'env': {
-        'browser': true,
-        'es2021': true
+  'env': {
+    'browser': true,
+    'es2021': true,
+  },
+  'extends': [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'google',
+  ],
+  'overrides': [
+    {
+      files: ['*.svelte'],
+      processor: 'svelte3/svelte3',
     },
-    'extends': [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended'
-    ],
-    'overrides': [
-        {
-            files: ['*.svelte'],
-            processor: 'svelte3/svelte3'
-        }
-    ],
-    'parser': '@typescript-eslint/parser',
-    'parserOptions': {
-        'ecmaVersion': 'latest',
-        'sourceType': 'module'
-    },
-    'plugins': [
-        // '@typescript-eslint',
-        'svelte3',
-        '@typescript-eslint'
-    ],
-    'rules': {
-        'indent': [
-            'error',
-            4
-        ],
-        'linebreak-style': [
-            'error',
-            'windows'
-        ],
-        'quotes': [
-            'error',
-            'single'
-        ],
-        'semi': [
-            'error',
-            'always'
-        ]
-    },
-    'settings': {
-        'svelte3/typescript': true, // load TypeScript as peer dependency
-    }
+  ],
+  'parser': '@typescript-eslint/parser',
+  'parserOptions': {
+    'ecmaVersion': 'latest',
+    'sourceType': 'module',
+  },
+  'plugins': [
+    '@typescript-eslint',
+    'svelte3',
+    '@typescript-eslint',
+  ],
+  'rules': {
+    // 'indent': [
+    //     'error',
+    //     4,
+    // ],
+    // 'linebreak-style': [
+    //     'error',
+    //     'windows',
+    // ],
+    // 'quotes': [
+    //     'error',
+    //     'single',
+    // ],
+    // 'semi': [
+    //     'error',
+    //     'always',
+    // ],
+  },
+  'settings': {
+    'svelte3/typescript': true, // load TypeScript as peer dependency
+  },
 };
