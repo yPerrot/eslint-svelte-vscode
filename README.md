@@ -66,7 +66,7 @@ If we install it, it will display the issues in your Typescript files, but why ?
 Because we did not tell it to check issues in `.svelete` files. 
 
 To do so add the following configuration in your settings.json file: 
-```json
+```js
 {
     // ...
     "eslint.validate": [
